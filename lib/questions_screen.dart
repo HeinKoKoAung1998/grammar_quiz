@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grammer_quiz/answers_button.dart';
 import 'package:grammer_quiz/data/constants.dart';
 import 'package:grammer_quiz/data/questions.dart';
 import 'package:grammer_quiz/model/quiz_questions.dart';
 import 'package:grammer_quiz/next_button.dart';
+
 
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key,required this.finalScore});
@@ -87,7 +89,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           children: [
             Text(
               'Question ${currentQuestionIndex+1} / $questionLength',
+              // style: GoogleFonts.robotoMono(color: netural,fontSize: 20),
               style: const TextStyle(
+
                 color: netural,
                 fontSize: 20,
               ),
@@ -108,11 +112,17 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                   color: Colors.yellow),
               child: Text(
                 currentQuestion.questionText,
-                style: const TextStyle(
+                style: GoogleFonts.roboto(
                   color: backgroundColor,
                   fontSize: 18,
                   fontWeight: FontWeight.bold
                 ),
+                textAlign: TextAlign.center,
+                // style: const TextStyle(
+                //   color: backgroundColor,
+                //   fontSize: 18,
+                //   fontWeight: FontWeight.bold
+                // ),
               ),
             
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grammer_quiz/data/constants.dart';
 
 class NextButton extends StatelessWidget{
@@ -22,14 +23,19 @@ class NextButton extends StatelessWidget{
                       )
                     )
                   ),
-                  child: const Text(
+                  child:  Text(
                     "Next Question",
-                    style: TextStyle(
-                      fontSize: 16,
-                      // fontStyle: FontStyle.italic,
+                    style: GoogleFonts.orbitron(
+                      fontSize: 15,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromRGBO(48, 32, 77, 1.0)
+                      color: Colors.blue.shade900
                     ),
+                    // style: TextStyle(
+                    //   fontSize: 16,
+                    //   // fontStyle: FontStyle.italic,
+                    //   fontWeight: FontWeight.bold,
+                    //   color: Color.fromRGBO(48, 32, 77, 1.0)
+                    // ),
                   ),
                  ),
               );

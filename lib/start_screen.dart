@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grammer_quiz/data/constants.dart';
 
 class StartScreen extends StatelessWidget{
@@ -13,21 +14,28 @@ class StartScreen extends StatelessWidget{
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const SizedBox(height: 100,),
+              const SizedBox(height: 130,),
               Image.asset(
                 'assets/images/welcome_transparent.png',
                 width: 300
        ,       ),
               const SizedBox(height: 50,),
-              const Text(
-                'Grammer Quiz Game',
-                style: TextStyle(
+               Text(
+                'Grammar Quiz',
+                style: GoogleFonts.blackOpsOne(
                   fontSize: 30,
-                  fontWeight: FontWeight.bold,
+                  // fontWeight: FontWeight.bold,
                   color: Colors.yellow,
                   letterSpacing: 2,
-                  fontStyle: FontStyle.italic   
+                  
                 ),
+                // style: TextStyle(
+                //   fontSize: 30,
+                //   fontWeight: FontWeight.bold,
+                //   color: Colors.yellow,
+                //   letterSpacing: 2,
+                //   fontStyle: FontStyle.italic   
+                // ),
               ),
               const SizedBox(height: 60,),
                SizedBox(
@@ -36,26 +44,36 @@ class StartScreen extends StatelessWidget{
                  child: ElevatedButton(
                   onPressed: switchScreen,
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.greenAccent.shade400),
+                    backgroundColor: MaterialStateProperty.all(Colors.yellow.shade400),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25)
                       )
                     )
                   ),
-                  child: const Text(
-                    "Play",
-                    style: TextStyle(
+                  child:  Text(
+                    "Start",
+                    style : GoogleFonts.orbitron(
                       fontSize: 22,
-                      // fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.bold,
-                      color: backgroundColor
-                    ),
+                      color: backgroundColor,
+                      letterSpacing: 1,
+                      fontWeight: FontWeight.bold
+                    )
+
+                    // style: TextStyle(
+                    //   fontSize: 20,
+                    //   // fontStyle: FontStyle.italic,
+                    //   fontWeight: FontWeight.bold,
+                    //   color: backgroundColor
+                    // ),
                   ),
                  ),
               )
             ],
           ));
+
+
+ 
     
   }
 }

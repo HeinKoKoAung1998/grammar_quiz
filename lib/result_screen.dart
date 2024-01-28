@@ -1,6 +1,7 @@
-import 'dart:ffi';
+
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grammer_quiz/data/constants.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -22,45 +23,55 @@ class ResultScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const SizedBox(
-          height: 30,
+          height: 100,
         ),
         Image.asset('assets/images/win.png',width: 200,),
         const SizedBox(
           height: 20,
         ),
-        const Text(
+         Text(
           'Congratulations',
-          style: TextStyle(
-              fontSize: 30, fontWeight: FontWeight.bold, color: netural),
+          // style: TextStyle(
+          //     fontSize: 30, fontWeight: FontWeight.bold, color: netural),
+          style: GoogleFonts.orbitron(
+            fontSize: 30,fontWeight: FontWeight.bold,color: netural
+          ),
         ),
         const SizedBox(
           height: 20,
         ),
         Text(
-          'SCORE : $score ',
-          style: const TextStyle(
-              color: Colors.yellow, fontSize: 40, fontWeight: FontWeight.bold),
+          'Score : $score ',
+          style: GoogleFonts.montserratAlternates(
+            color: Colors.yellow,fontSize: 40,fontWeight: FontWeight.bold
+          ),
+          // style: const TextStyle(
+          //     color: Colors.yellow, fontSize: 40, fontWeight: FontWeight.bold),
         ),
         const SizedBox(
           height: 20,
         ),
         Text(
           'Your answer $score out of 10 questions correctly!',
-          style: const TextStyle(
-            fontSize: 20,
-            color: netural,
-          ),
-          textAlign: TextAlign.center,
+           style: GoogleFonts.kalam(
+            fontSize: 15,
+            color: netural
+           ),textAlign: TextAlign.center,
+          // style: const TextStyle(
+          //   fontSize: 15,
+          //   color: netural,
+          // ),
+          // textAlign: TextAlign.center,
         ),
         const SizedBox(
-          height: 30,
+          height: 120,
         ),
          Row( 
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
 
             SizedBox(
-              width: 70,
+              width: 100,
               child: ElevatedButton(
                 
                 style: ElevatedButton.styleFrom(
@@ -69,16 +80,20 @@ class ResultScreen extends StatelessWidget {
                   
                 ),
                 onPressed: onRestart,
-               child: const Text('Restart',
-               style: TextStyle(color: backgroundColor,
-               fontSize: 18,fontWeight: FontWeight.bold),
+               child:  Text('Restart',
+               style: GoogleFonts.orbitron(
+                 color: backgroundColor,
+                 fontSize: 18,fontWeight: FontWeight.bold
+               ),
+              //  style: TextStyle(color: backgroundColor,
+              //  fontSize: 18,fontWeight: FontWeight.bold),
                textAlign: TextAlign.center,))
               
             ),
-            const SizedBox(width: 40,),
+            const SizedBox(width: 80,),
 
             SizedBox(
-              width: 90,
+              width: 120,
               child: ElevatedButton(
                 
                 style: ElevatedButton.styleFrom(
@@ -86,65 +101,19 @@ class ResultScreen extends StatelessWidget {
                   backgroundColor: Colors.red
                   
                 ),
-                onPressed: onRestart,
-               child: const Text('Exit',
-               style: TextStyle(color: backgroundColor,
-               fontSize: 18,fontWeight: FontWeight.bold),
+                onPressed: onExit,
+               child:  Text('Exit',
+               style: GoogleFonts.orbitron(
+                 color: backgroundColor,
+                 fontSize: 18,fontWeight: FontWeight.bold
+               ),
+              //  style: TextStyle(color: backgroundColor,
+              //  fontSize: 18,fontWeight: FontWeight.bold),
                textAlign: TextAlign.center,))
               
             )
           ],
-
-          
-
-          
-
-
-          // mainAxisAlignment: MainAxisAlignment.center,
-          // children: [
-          //   // Padding(padding: EdgeInsets.symmetric(horizontal: 30)),
-          //   // ElevatedButton(onPressed: (){}, child: Text('Restart')),
-          //   ElevatedButton.icon(
-          //     style:  ElevatedButton.styleFrom(
-          //       backgroundColor: Colors.yellow,
-          //       padding: EdgeInsets.all(8)
-
-          //     ),
-          //     onPressed: onRestart,
-          //     icon: const Icon(
-          //       Icons.restart_alt,
-          //       color: backgroundColor,
-          //     ),
-          //     label: const Text(
-          //       'Restart',
-          //       style: TextStyle(
-          //           color: backgroundColor,
-          //           fontSize: 20,
-          //           fontWeight: FontWeight.bold,
-                    
-          //           ),
-          //     ),
-          //   ),
-          //   const SizedBox(
-          //     width: 40,
-          //   ),
-          //   // ElevatedButton(onPressed: () {}, child: Text('Exit'))
-          //   ElevatedButton.icon(
-          //     style: ElevatedButton.styleFrom(
-          //       backgroundColor: Colors.red,
-          //       padding: EdgeInsets.all(8)
-          //     ),
-          //     onPressed: onExit,
-          //    icon: const Icon(Icons.exit_to_app,color: backgroundColor,), 
-          //    label: const Text('Exit',
-          //    style: TextStyle(
-          //    color: backgroundColor,
-          //    fontSize: 20,
-          //    fontWeight: FontWeight.bold
-          //    ),
-          //    ),
-          //    )
-          // ],
+         
         )
       ],
     ));

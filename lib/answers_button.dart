@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grammer_quiz/data/constants.dart';
 
 
@@ -28,10 +29,15 @@ class AnswersButton extends StatelessWidget{
        title: Text(answer 
        ,
        textAlign: TextAlign.center,
-       style: const TextStyle(color: backgroundColor,
-       fontSize: 18,
-       fontWeight: FontWeight.bold,
-       ),
+       style: GoogleFonts.roboto(
+                  color: backgroundColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold
+                ),
+      //  style: const TextStyle(color: backgroundColor,
+      //  fontSize: 18,
+      //  fontWeight: FontWeight.bold,
+      //  ),
      ),
      ),
           );
