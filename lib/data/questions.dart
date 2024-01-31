@@ -1,4 +1,4 @@
-import 'package:grammer_quiz/model/quiz_questions.dart';
+import 'package:grammar_quiz/model/quiz_questions.dart';
 
 var questions = [
   Question('Do not  you dare ________ that vase', [
@@ -55,10 +55,11 @@ var questions = [
   Question(
     'Find the Adjective Phrase. "The man sitting in front of us is our MSI principal."',
     [
-      Answer("sitting in front of us", true),
+     
       Answer("out MSI principal", false),
       Answer("in front of us", false),
       Answer("in front of us", false),
+       Answer("sitting in front of us", true),
     ],
   ),
   Question(
@@ -73,8 +74,9 @@ var questions = [
   Question(
     'Choose the correct answer. The boy said, "Aunt, go straight and turn left.',
     [
-      Answer("The boy told his aunt to go straight and turn left", true),
+      
       Answer("The boy said that his aunt to go straight and turn left", false),
+      Answer("The boy told his aunt to go straight and turn left", true),
       Answer("The boy told his aunt why she go straight and turn left", false),
       Answer("The boy told his aunt not to go straight and turn left", false),
     ],
@@ -82,9 +84,10 @@ var questions = [
   Question(
     'We enjoyed the trip to Pyin Oo Lwin. It was really _______.',
     [
-      Answer("enjoyable", true),
+      
       Answer("enjoy", false),
       Answer("enjoyment", false),
+      Answer("enjoyable", true),
       Answer("enjoys", false),
     ],
   )

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:grammer_quiz/data/constants.dart';
+import 'package:grammar_quiz/data/constants.dart';
 
 class NextButton extends StatelessWidget{
   const NextButton ({super.key,required this.next});
@@ -30,12 +30,7 @@ class NextButton extends StatelessWidget{
                       fontWeight: FontWeight.bold,
                       color: Colors.blue.shade900
                     ),
-                    // style: TextStyle(
-                    //   fontSize: 16,
-                    //   // fontStyle: FontStyle.italic,
-                    //   fontWeight: FontWeight.bold,
-                    //   color: Color.fromRGBO(48, 32, 77, 1.0)
-                    // ),
+
                   ),
                  ),
               );

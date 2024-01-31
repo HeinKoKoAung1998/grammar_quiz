@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:grammer_quiz/answers_button.dart';
-import 'package:grammer_quiz/data/constants.dart';
-import 'package:grammer_quiz/data/questions.dart';
-import 'package:grammer_quiz/model/quiz_questions.dart';
-import 'package:grammer_quiz/next_button.dart';
+import 'package:grammar_quiz/answers_button.dart';
+import 'package:grammar_quiz/data/constants.dart';
+import 'package:grammar_quiz/data/questions.dart';
+import 'package:grammar_quiz/model/quiz_questions.dart';
+import 'package:grammar_quiz/next_button.dart';
 
 
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key,required this.finalScore});
    final void Function(int score) finalScore;
-  //  bool result ;
-  // final void Function(String answer) onSelecterAnswer;
+  
 
   @override
   State<StatefulWidget> createState() {
@@ -25,14 +24,12 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   int score = 0;
   
 
-  // List<String> selectedAnswer = [];
-
-  // int index = 0;
+  
   bool isPressed = false;
   bool alreadyAnswered = false;
   
   void answerQuestion(bool value){
-    // widget.onSelecterAnswer(selectedAnswers);
+  
 
     if(alreadyAnswered){
       return;
@@ -69,9 +66,6 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
       margin: EdgeInsets.symmetric(vertical: 20.0),)
     );
    }
-    
-    
-    
   }
 
   @override
@@ -79,17 +73,17 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   final currentQuestion = questions[currentQuestionIndex];
   final List<Answer> answers = currentQuestion.answerList;
   
-  // final answer = answers[0].answerText;
+
 
     return Container(
       margin: const EdgeInsets.all(30),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.start,
+          
           children: [
             Text(
               'Question ${currentQuestionIndex+1} / $questionLength',
-              // style: GoogleFonts.robotoMono(color: netural,fontSize: 20),
+              
               style: const TextStyle(
 
                 color: netural,
@@ -118,11 +112,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                   fontWeight: FontWeight.bold
                 ),
                 textAlign: TextAlign.center,
-                // style: const TextStyle(
-                //   color: backgroundColor,
-                //   fontSize: 18,
-                //   fontWeight: FontWeight.bold
-                // ),
+
               ),
             
             ),

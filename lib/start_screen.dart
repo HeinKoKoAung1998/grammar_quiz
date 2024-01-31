@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:grammer_quiz/data/constants.dart';
+import 'package:grammar_quiz/data/constants.dart';
 
 class StartScreen extends StatelessWidget{
   const StartScreen ({super.key,required this.switchScreen});
@@ -29,13 +29,7 @@ class StartScreen extends StatelessWidget{
                   letterSpacing: 2,
                   
                 ),
-                // style: TextStyle(
-                //   fontSize: 30,
-                //   fontWeight: FontWeight.bold,
-                //   color: Colors.yellow,
-                //   letterSpacing: 2,
-                //   fontStyle: FontStyle.italic   
-                // ),
+
               ),
               const SizedBox(height: 60,),
                SizedBox(
@@ -44,6 +38,7 @@ class StartScreen extends StatelessWidget{
                  child: ElevatedButton(
                   onPressed: switchScreen,
                   style: ButtonStyle(
+                    
                     backgroundColor: MaterialStateProperty.all(Colors.yellow.shade400),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
@@ -58,14 +53,7 @@ class StartScreen extends StatelessWidget{
                       color: backgroundColor,
                       letterSpacing: 1,
                       fontWeight: FontWeight.bold
-                    )
-
-                    // style: TextStyle(
-                    //   fontSize: 20,
-                    //   // fontStyle: FontStyle.italic,
-                    //   fontWeight: FontWeight.bold,
-                    //   color: backgroundColor
-                    // ),
+                    )      
                   ),
                  ),
               )

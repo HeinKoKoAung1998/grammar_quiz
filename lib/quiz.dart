@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
-import 'package:grammer_quiz/questions_screen.dart';
-import 'package:grammer_quiz/result_screen.dart';
-import 'package:grammer_quiz/start_screen.dart';
+import 'package:grammar_quiz/questions_screen.dart';
+import 'package:grammar_quiz/result_screen.dart';
+import 'package:grammar_quiz/start_screen.dart';
 
 class Quiz extends StatefulWidget{
   const Quiz ({super.key});
@@ -16,8 +15,7 @@ class Quiz extends StatefulWidget{
 
 class _QuizState extends State<Quiz>{
     int finalScore = 0  ;
-    // bool checkResult = false;
-  // List<String> selectedAnswers = [];
+   
   
   var activeScreen = 'start-screen';
   void switchScreen(){
@@ -32,7 +30,7 @@ class _QuizState extends State<Quiz>{
         activeScreen = 'result-screen';
         finalScore = score;
       });
-      // activeScreen = 'result-screen';
+      
   }
 
   void restart(){
